@@ -1,0 +1,16 @@
+name: 'build-push'
+on:  
+  push:
+    tags:
+      - '**'
+
+jobs:
+  build_image:
+    runs-on: [Linux-sl3]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: 'true'
+      - shell: bash
+        run: |
+          bash ./build.sh docker-action/template:${GITHUB_REF##*/}
