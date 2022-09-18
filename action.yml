@@ -1,0 +1,13 @@
+name: 'action_name'
+description: 'description'
+# inputs:
+#   server_url:
+#     description: ''
+#     required: true
+#     default: ''
+# outputs:
+#   output_name:
+#     description: '...'
+runs:
+  using: 'docker'
+  image: 'docker://docker-action/template:v1'
