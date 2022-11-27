@@ -1,5 +1,6 @@
 name: 'build-push'
-on:  
+on:
+  workflow_dispatch
   push:
     tags:
       - '**'
