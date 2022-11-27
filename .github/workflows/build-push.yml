@@ -1,9 +1,6 @@
 name: 'build-push'
 on:
   workflow_dispatch
-  push:
-    tags:
-      - '**'
 
 jobs:
   build_image:
